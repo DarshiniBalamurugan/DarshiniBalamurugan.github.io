@@ -59,15 +59,16 @@
 </body>
 </html>
 
-<!-- <script>
+<script>
     document
+        .getElementById('select-speaker')
         .addEventListener('change', function () {
             'use strict';
             var targets = document.getElementsByClassName("select-speaker")
             for (let i = 0; i < targets.length; i++) {
-                name = "samples/" + "UrbanSound Dataset sample_" + i.toString() + ".wav"
+                name = "samples/mp3/ted_speakers/" + this.value + "/sample-" + i.toString() + ".mp3"
                 targets[i].setAttribute("src", name)
                 targets[i].parentElement.load()
             }
     });
-    </script> -->
+    </script>
