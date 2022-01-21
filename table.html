@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+    <hr>
+    <div id="dvData">
+        <table>
+            <tr>
+                <th>Column One</th>
+                <th>Column Two</th>
+                <th>Column Three</th>
+            </tr>
+            <tr>
+                <td>row1 Col1</td>
+                <td>row1 Col2</td>
+                <td>
+                  <form class="csvbtns">
+                    <label><input type="radio" value="" name="" checked> yes</label>
+                    <label><input type="radio" value="" name=""> no</label>
+                  </form>
+                </td>
+            </tr>
+            <tr>
+                <td>row2 Col1</td>
+                <td>row2 Col2</td>
+                <td>
+                  <form class="csvbtns">
+                    <label><input type="radio" value="" name="" checked> yes</label>
+                    <label><input type="radio" value="" name=""> no</label>
+                  </form>
+                </td>
+            </tr>
+            <tr>
+                <td>row3 Col1</td>
+                <td>row3 Col2</td>
+                <td>
+                  <form class="csvbtns">
+                    <label><input type="radio" value="yes" name="poop" checked> yes</label>
+                    <label><input type="radio" value="no" name="poop"> no</label>
+                  </form>
+                </td>
+            </tr>
+            <tr>
+                <td>row4 'Col1'</td>
+                <td>row4 'Col2'</td>
+                <td>row4 'Col3'</td>
+            </tr>
+            <tr>
+                <td>row5 &quot;Col1&quot;</td>
+                <td>row5 &quot;Col2&quot;</td>
+                <td>row5 &quot;Col3&quot;</td>
+            </tr>
+            <tr>
+                <td>row6 "Col1"</td>
+                <td>row6 "Col2"</td>
+                <td>row6 "Col3"</td>
+            </tr>
+        </table>
+    </div>
+    <br/>
+    <a href="#" class="export">Export Table data into Excel</a>
+    
+    <script>
+        function htmlToCSV(html, filename) {
+            var data = [];
+            var rows = document.querySelectorAll("table tr");
+                    
+            for (var i = 0; i < rows.length; i++) {
+                var row = [], cols = rows[i].querySelectorAll("td, th");
+                        
+                for (var j = 0; j < cols.length; j++) {
+                        row.push(cols[j].innerText);
+                }
+                        
+                data.push(row.join(",")); 		
+            }
+        
+            downloadCSVFile(data.join("\n"), filename);
+        }
+        </script>
