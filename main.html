@@ -15,8 +15,51 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-
     <body>
+    <div class="wrapper">
+            <h2>Audio Annotation</h2>
+                <h3>Samples</h3>
+                    <p>Sample Audio from Urban Dataset</p>
+            <div class='playlist'>
+                <div class='labeled-audio'><audio controls><source src='Samples/UrbanSound_Dataset_sample_audio_103074-7-0-0.wav' type='audio/wav'>WAV file</audio></div>
+    </div>
+    <section>
+    <form action="#" name="DominantNoise" action="process.php" method="post"> 
+    <table>
+      <tr>
+        <td>What is the dominant noise you hear?</td>
+        <td>
+        <input type="radio" name="sound " >Dog Barking<br>
+        <input type="radio" name="sound " >Rain<br>
+        <input type="radio" name="sound " >Crickets<br>
+        <input type="radio" name="sound " >Chirping Birds<br>
+        <input type="radio" name="sound " >Wind<br>
+        <input type="radio" name="sound " >Crying Baby<br>
+        <input type="radio" name="sound " >Breathing<br>
+        <input type="radio" name="sound " >Footsteps<br>
+        <input type="radio" name="sound " >Talking<br>
+        <input type="radio" name="sound " >Children Playing<br>
+        <input type="radio" name="sound " >Drilling<br>
+        <input type="radio" name="sound " >Engine<br>
+        <input type="radio" name="sound " >Siren<br>
+        <input type="radio" name="sound " >Car Horn<br>
+        <input type="radio" name="sound " >Train<br>
+        <input type="radio" name="sound " >Aeroplane<br>
+        <input type="radio" name="sound " >Industrial<br>
+        <input type="radio" name="sound " >(Nieghbourhood) Garbage Truck<br>
+        <input type="radio" name="sound " >(Neighbourhood) Moving Items<br>
+     </td>
+    </tr> 
+    <tr>
+        <td><input type="submit" value="Submit Form" /></td>
+        </tr>
+          </table>
+          </form>
+          </section>
+          </body>
+
+
+    <!-- <body>
         <div class="wrapper">
         <h2>Audio Annotation</h2>
             <h3>Samples</h3>
@@ -56,35 +99,33 @@
                     <input type="radio" name="sound " >Unpleasant <br>
                     <input type="radio" name="sound " >Neutral<br>
                 </div>	
-                <table id="table">
-                    <tr>
-                        <th>Dominant_Noise</th>
-                        <th>Sound_Feel</th>
-                    </tr>
-                </table>
+                
                 <div id="submit">
                     <input type="Submit">
                 </div>
-                </section>
+                </section> -->
 
 <script>
 
-// function addRow() {
-//    "use strict";
+function addRow() {
+   "use strict";
 
-//     var table = document.getElementById("table");
-//     var row= document.createElement("tr");
-//     var td1 = document.createElement("td");
-//     var td2 = document.createElement("td");
+    var table = document.getElementById("table");
+    var row= document.createElement("tr");
+    var td1 = document.createElement("td");
+    var td2 = document.createElement("td");
 
-//     td1.innerHTML = document.getElementById("dominant_noise").value;
-//     td2.innerHTML  = document.getElementById("sound_feel").value;
+    td1.innerHTML = document.getElementById("dominant_noise").value;
+    td2.innerHTML  = document.getElementById("sound_feel").value;
 
-//     row.appendChild(td1);
-//     row.appendChild(td2);
+    row.appendChild(td1);
+    row.appendChild(td2);
 
-//     table.children[0].appendChild(row);
-// };
+    table.children[0].appendChild(row);
+
+    downloadCSVFile(data.join("\n"), filename);
+
+};
 
 function htmlToCSV(html, filename) {
             var data = [];
