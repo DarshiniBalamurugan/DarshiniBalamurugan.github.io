@@ -29,7 +29,7 @@
              <form id="survey-form">
               <div id="input">
                 <div.b class="button-control">	
-                    <label id="radio" > What is the dominant noise you hear?</label><br>
+                    <label id="dominant_noise" > What is the dominant noise you hear?</label><br>
                     <input type="radio" name="sound " >Dog Barking<br>
                     <input type="radio" name="sound " >Rain<br>
                     <input type="radio" name="sound " >Crickets<br>
@@ -51,16 +51,41 @@
                     <input type="radio" name="sound " >(Neighbourhood) Moving Items<br>
                 </div>	
                 <div.b class="button-control">	
-                    <label id="radio" > Is the noise pleasant or unpleasant?</label><br>
+                    <label id="sound_feel" > Is the noise pleasant or unpleasant?</label><br>
                     <input type="radio" name="sound " >Pleasant <br>
                     <input type="radio" name="sound " >Unpleasant <br>
                     <input type="radio" name="sound " >Neutral<br>
                 </div>	
+                <table id="table">
+                    <tr>
+                        <th>Dominant_Noise</th>
+                        <th>Sound_Feel</th>
+                    </tr>
+                </table>
                 <div id="submit">
                     <input type="Submit">
                 </div>
                 </section>
 
+<script>
+
+function addRow() {
+   "use strict";
+
+    var table = document.getElementById("table");
+    var row= document.createElement("tr");
+    var td1 = document.createElement("td");
+    var td2 = document.createElement("td");
+
+    td1.innerHTML = document.getElementById("dominant_noise").value;
+    td2.innerHTML  = document.getElementById("sound_feel").value;
+
+    row.appendChild(td1);
+    row.appendChild(td2);
+
+    table.children[0].appendChild(row);
+};
+</script>
 <!-- 
 
         <h3 id = 'details'></h3>        
