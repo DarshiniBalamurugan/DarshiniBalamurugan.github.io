@@ -124,6 +124,8 @@ p {
     bottom: 60px;
 }
 
+legend { display: none; }
+
 .labeled-audio {
     text-align: center;
     display: inline;
