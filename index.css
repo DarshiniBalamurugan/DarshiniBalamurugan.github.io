@@ -124,7 +124,7 @@ p {
     bottom: 60px;
 }
 
-/* legend { display: none; } */
+legend { display: none; }
 
 .labeled-audio {
     text-align: center;
