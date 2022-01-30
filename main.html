@@ -20,7 +20,8 @@
             <h2>Audio Annotation</h2>
                 <h3>Samples</h3>
                     <p>Sample Audio from Urban Dataset</p>
-                    <audio id="music" autoplay controls>
+    </div>
+                    <!-- <audio id="music" autoplay controls>
                         <source src="" type="audio/wav">
                     </audio>
                     <script type="text/javascript">
@@ -31,7 +32,7 @@
                             x.src = fileArray[num]; 
                             var y = document.getElementsByName("name")
                             y.value=fileArray[num]; 
-                            
+
                             var audio = document.getElementById("music");
                             audio.volume = 1;
                             audio.autoplay = false;
@@ -39,13 +40,33 @@
                             }
 
                             myFunction()
-                    </script>
+                    </script> -->
             <!-- <div class='playlist'>
                 <div class='labeled-audio'><audio controls><source src='Samples/UrbanSound_Dataset_sample_audio_103074-7-0-0.wav' type='audio/wav'>WAV file</audio></div>
     </div> -->
     <div class="question">
+        <audio id="music" autoplay controls>
+            <source src="" type="audio/wav">
+        </audio>
+        <script type="text/javascript">
+            function myFunction() {
+                fileArray = ["Samples/UrbanSound_Dataset_sample_audio_103074-7-0-0.wav", "Samples/UrbanSound_Dataset_sample_audio_100032-3-0-0.wav", "Samples/UrbanSound_Dataset_sample_audio_100263-2-0-117.wav"]
+                var num = Math.floor(Math.random() * fileArray.length);
+                var x = document.getElementById("music");
+                x.src = fileArray[num]; 
+                var y = document.getElementsByName("name")
+                y.value=fileArray[num]; 
+                
+                var audio = document.getElementById("music");
+                audio.volume = 1;
+                audio.autoplay = false;
+                audio.load();
+                }
+
+                myFunction()
+        </script>
                 <p>What is the dominant noise you hear?</p>
-</div>
+    </div>
     <form action="#" name="DominantNoise" method="post" data-netlify="true">
         <input type="hidden" name="name" value="">
         <!-- <label for="lang">Select one:</label> -->
