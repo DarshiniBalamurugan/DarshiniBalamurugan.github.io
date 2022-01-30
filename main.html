@@ -20,6 +20,21 @@
             <h2>Audio Annotation</h2>
                 <h3>Samples</h3>
                     <p>Sample Audio from Urban Dataset</p>
+                    <audio id="music" autoplay controls>
+                    </audio>
+                    
+                    <script type="text/javascript">
+                        function addAudio() {
+                            fileArray = ["Samples/UrbanSound_Dataset_sample_audio_103074-7-0-0.wav", "UrbanSound Dataset sample_audio_100032-3-0-0.wav", "UrbanSound Dataset sample_audio_100263-2-0-117.wav"]
+                            var num = Math.floor(Math.random() * fileArray.length);
+                            var x = document.getElementById("music");
+                            x.innerHTML = "";
+                            x.innerHTML += '<source src="audio/' + fileArray[num] + '" type="audio/mpeg">';
+                    
+                            x.play(); 
+                        }
+                        addAudio();
+                    </script>
             <div class='playlist'>
                 <div class='labeled-audio'><audio controls><source src='Samples/UrbanSound_Dataset_sample_audio_103074-7-0-0.wav' type='audio/wav'>WAV file</audio></div>
     </div>
