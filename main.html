@@ -54,20 +54,24 @@
                 var num = Math.floor(Math.random() * fileArray.length);
                 var x = document.getElementById("music");
                 x.src = fileArray[num]; 
-                var y = document.getElementsByTagName("name")
-                y.value=fileArray[num]; 
                 
                 var audio = document.getElementById("music");
                 audio.volume = 1;
                 audio.autoplay = false;
                 audio.load();
                 }
-
                 myFunction()
+
+            function getName(){
+                var inputF = document.getElementsByName("filename")
+                var inputName = document.getElementById("music").src
+                inputF.value= inputName
+            }
+
         </script>
                 <p>What is the dominant noise you hear?</p>
     <form action="#" name="DominantNoise" method="post" data-netlify="true">
-        <input type="hidden" name="name" value="myFunction()">
+        <input type="hidden" name="file_name" value=getName()>
         <select name="Select" id="lang">
           <option value="DogBarking">Dog Barking</option>
           <option value="Rain">Rain</option>
