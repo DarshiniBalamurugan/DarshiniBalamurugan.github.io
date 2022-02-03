@@ -78,13 +78,14 @@
                 var num = Math.floor(Math.random() * fileArray.length);
                 var x = document.getElementById("music");
                 x.src = fileArray[num]; 
+                var num2 = Math.floor(Math.random() * fileArray.length);
                 var x2 = document.getElementById("music2");
-                x2.src = fileArray[num];
+                x2.src = fileArray[num2];
 
                 var y = document.getElementById("file_name");
                 y.value = fileArray[num]
                 var y2 = document.getElementById("file_name2");
-                y2.value = fileArray[num]
+                y2.value = fileArray[num2]
 
 
                 var audio = document.getElementById("music");
