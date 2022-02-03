@@ -48,7 +48,28 @@
         <audio id="music" autoplay controls>
             <source src="" type="audio/wav">
         </audio>
-        <script type="text/javascript">
+                <p>What is the dominant noise you hear?</p>
+    <form action="#" name="DominantNoise" method="post" data-netlify="true">
+        <input type="hidden" id="file_name" name="file_name" value="">
+        <select name="Select" id="lang">
+          <option value="DogBarking">Dog Barking</option>
+          <option value="Rain">Rain</option>
+          <option value="Crickets">Crickets</option>
+          <option value="ChirpingBirds">Chirping Birds</option>
+          <option value="Wind">Wind</option>
+          <option value="Children">Children</option>
+          <option value="Footsteps">Footsteps</option>
+          <option value="Talking">Talking</option>
+          <option value="Drilling">Drilling</option>
+          <option value="Engine">Engine</option>
+          <option value="Siren">Siren</option>
+          <option value="CarHorn">Car Horn</option>
+          <option value="Train">Train</option>
+          <option value="Aeroplane">Aeroplane</option>
+        </select>
+        <input type="submit" value="Submit" />
+          </form>
+          <script type="text/javascript">
             function myFunction() {
                 fileArray = ["Samples/UrbanSound_Dataset_sample_audio_103074-7-0-0.wav", "Samples/UrbanSound_Dataset_sample_audio_100032-3-0-0.wav", "Samples/UrbanSound_Dataset_sample_audio_100263-2-0-117.wav"]
                 var num = Math.floor(Math.random() * fileArray.length);
@@ -71,27 +92,6 @@
             // }
 
         </script>
-                <p>What is the dominant noise you hear?</p>
-    <form action="#" name="DominantNoise" method="post" data-netlify="true">
-        <input type="hidden" id="file_name" name="file_name" value="">
-        <select name="Select" id="lang">
-          <option value="DogBarking">Dog Barking</option>
-          <option value="Rain">Rain</option>
-          <option value="Crickets">Crickets</option>
-          <option value="ChirpingBirds">Chirping Birds</option>
-          <option value="Wind">Wind</option>
-          <option value="Children">Children</option>
-          <option value="Footsteps">Footsteps</option>
-          <option value="Talking">Talking</option>
-          <option value="Drilling">Drilling</option>
-          <option value="Engine">Engine</option>
-          <option value="Siren">Siren</option>
-          <option value="CarHorn">Car Horn</option>
-          <option value="Train">Train</option>
-          <option value="Aeroplane">Aeroplane</option>
-        </select>
-        <input type="submit" value="Submit" />
-          </form>
         </div>
           </body>
 </html>
