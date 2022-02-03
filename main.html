@@ -27,10 +27,10 @@
         </audio>
                 <p>What is the dominant noise you hear?</p>
 
-                <audio id="music" autoplay controls>
-                    <source src="" type="audio/wav">
-                </audio>
-                        <p>What is the dominant noise you hear?</p>
+        <audio id="music2" autoplay controls>
+            <source src="" type="audio/wav">
+        </audio>
+            <p>What is the dominant noise you hear?</p>
 
     <form action="#" name="DominantNoise" method="post" action="secondmain.html" data-netlify="true">
         <input type="hidden" id="file_name" name="file_name" value="">
@@ -51,7 +51,7 @@
           <option value="Aeroplane">Aeroplane</option>
         </select>
 
-        <input type="hidden" id="file_name" name="file_name" value="">
+        <input type="hidden" id="file_name2" name="file_name2" value="">
         <select name="Select" id="lang">
           <option value="DogBarking">Dog Barking</option>
           <option value="Rain">Rain</option>
@@ -68,7 +68,7 @@
           <option value="Train">Train</option>
           <option value="Aeroplane">Aeroplane</option>
         </select>
-        
+
         <input type="submit" value="Submit" />
           </form>
 
@@ -78,8 +78,14 @@
                 var num = Math.floor(Math.random() * fileArray.length);
                 var x = document.getElementById("music");
                 x.src = fileArray[num]; 
+                var x2 = document.getElementById("music");
+                x2.src = fileArray[num];
+
                 var y = document.getElementById("file_name");
                 y.value = fileArray[num]
+                var y2 = document.getElementById("file_name");
+                y2.value = fileArray[num]
+
 
                 var audio = document.getElementById("music");
                 audio.volume = 1;
