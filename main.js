@@ -1,5 +1,4 @@
 
-          <script type="text/javascript">
           function myFunction() {
               fileArray = ["Samples/UrbanSound_Dataset_sample_audio_103074-7-0-0.wav", "Samples/UrbanSound_Dataset_sample_audio_100032-3-0-0.wav", "Samples/UrbanSound_Dataset_sample_audio_100263-2-0-117.wav"]
               var num = Math.floor(Math.random() * fileArray.length);
@@ -25,6 +24,3 @@
               audio2.autoplay = false;
               audio2.load();
               }
-              myFunction()
-
-      </script>
