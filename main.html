@@ -33,6 +33,10 @@
             <p>What is the dominant noise you hear?</p>
 
     <form action="#" name="DominantNoise" method="post" action="secondmain.html" data-netlify="true">
+        <audio id="music" autoplay controls>
+            <source src="" type="audio/wav">
+        </audio>
+                <p>What is the dominant noise you hear?</p>
         <input type="hidden" id="file_name" name="file_name" value="">
         <select name="Select" id="lang">
           <option value="DogBarking">Dog Barking</option>
@@ -51,6 +55,10 @@
           <option value="Aeroplane">Aeroplane</option>
         </select>
 
+        <audio id="music2" autoplay controls>
+            <source src="" type="audio/wav">
+        </audio>
+            <p>What is the dominant noise you hear?</p>
         <input type="hidden" id="file_name2" name="file_name2" value="">
         <select name="Select2" id="lang">
           <option value="DogBarking">Dog Barking</option>
@@ -68,10 +76,9 @@
           <option value="Train">Train</option>
           <option value="Aeroplane">Aeroplane</option>
         </select>
-
         <input type="submit" value="Submit" />
-          </form>
 
+          </form>
           <script type="text/javascript">
             function myFunction() {
                 fileArray = ["Samples/UrbanSound_Dataset_sample_audio_103074-7-0-0.wav", "Samples/UrbanSound_Dataset_sample_audio_100032-3-0-0.wav", "Samples/UrbanSound_Dataset_sample_audio_100263-2-0-117.wav"]
