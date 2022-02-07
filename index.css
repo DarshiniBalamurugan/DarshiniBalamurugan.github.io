@@ -179,3 +179,29 @@ div.a {
   div.c {
     text-align: justify;
   }
+
+  input {
+    border: none;
+    font-family: "Crimson Text", serif;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #f2f2f2;
+    padding: 12px;
+    border-radius: 3px;
+    width: 250px;
+    font-size: 14px;
+  }
+
+
+  select {
+    border: none;
+    font-family: "Crimson Text", serif;
+    text-align: center;
+    background: #f2f2f2;
+    padding: 12px;
+    border-radius: 3px;
+    width: 250px;
+    font-size: 14px;
+  }
