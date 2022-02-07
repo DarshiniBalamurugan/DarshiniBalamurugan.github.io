@@ -7,6 +7,12 @@
             h1 {text-align: center;}
             p {text-align: center;}
             div {text-align: center;}
+            .row {
+            display: flex;
+            }
+            .column {
+            flex: 50%;
+            }
         </style>
         <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
@@ -92,14 +98,15 @@
                     var num = Math.floor(Math.random() * fileArray.length);
                     var x = document.getElementById(`music${i+1}`);
                     x.src = fileArray[num]; 
-                    fileArray.splice(num, 1);
                     var y = document.getElementById(`file_name${i+1}`);
                     y.value = fileArray[num];
-                    var audio = document.getElementById(`music${i+1}`);
-                    audio.volume = 1;
-                    audio.autoplay = false;
-                    audio.load();
+                    // var audio = document.getElementById(`music${i+1}`);
+                    x.volume = 1;
+                    x.autoplay = false;
+                    x.load();
+                    fileArray.splice(num, 1);
                 }
+
 
                 // var x2 = document.getElementById("music2");
                 // var num2 = Math.floor(Math.random() * fileArray.length);
