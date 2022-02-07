@@ -25,7 +25,7 @@ function submitForm(e){
 
 //   // Clear form
 //   document.getElementById('contactForm').reset();
-// }
+}
 
 // Function to get get form values
 function getInputVal(id){
@@ -33,13 +33,11 @@ function getInputVal(id){
 }
 
 // Save message to firebase
-function saveMessage(name, company, email, phone, message){
+function saveMessage(file_name, question1){
   var newMessageRef = messagesRef.push();
   newMessageRef.set({
-    name: name,
-    company:company,
-    email:email,
-    phone:phone,
-    message:message
+    file_name: file_name,
+    question1:question1,
   });
 }
+

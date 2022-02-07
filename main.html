@@ -51,7 +51,7 @@
         </div>
 
 
-        
+        <!-- copy this ten times, change filearray.length to 10 and add all 100++ files name to filearray-->
         <div class="row"> 
             <div class="column">
                 <audio id="music1" autoplay controls>
@@ -155,7 +155,7 @@
                     "Samples/UrbanSound_Dataset_sample_audio_100263-2-0-117.wav"
                 ]
 
-                var n = fileArray.length;
+                var n = 10;
                 for (let i = 0; i < n; i++) {
                     var num = Math.floor(Math.random() * fileArray.length);
                     var x = document.getElementById(`music${i+1}`);
