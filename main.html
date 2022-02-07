@@ -85,6 +85,7 @@
                 var num = Math.floor(Math.random() * fileArray.length);
                 var x = document.getElementById("music");
                 x.src = fileArray[num]; 
+                fileArray.splice(num, 1);
                 var x2 = document.getElementById("music2");
                 var num2 = Math.floor(Math.random() * fileArray.length);
                 x2.src = fileArray[num2];
