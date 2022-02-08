@@ -3,7 +3,7 @@
     padding: 0;
     border: none;
     box-sizing: border-box;
-    font-family: "Crimson Text", serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: 400;
     font-size: 20px;
     line-height: 145%;
@@ -182,11 +182,11 @@ div.a {
 
   input {
     border: none;
-    font-family: "Crimson Text", serif;
     -webkit-appearance: none;
     -ms-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    font-family: "Open Sans", sans-serif;
     background: #f2f2f2;
     padding: 12px;
     border-radius: 3px;
@@ -194,12 +194,22 @@ div.a {
     font-size: 14px;
   }
 
+  #submit {
+    font-family: "Open Sans", sans-serif;
+    background: #bdf0c4fa;
+    font-size: 18px;
+    padding: 12px;
+    border-radius: 3px;
+    width: 350px;
+    font-weight: bold;
+  }
+
 
   select {
     border: none;
-    font-family: "Crimson Text", serif;
+    font-family: "Open Sans", sans-serif;
     text-align: center;
-    background: #f2f2f2;
+    background: #e9e9e4;
     padding: 12px;
     border-radius: 3px;
     width: 250px;
