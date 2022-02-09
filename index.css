@@ -26,12 +26,16 @@ h1 {
     font-size: 40px;
     font-weight: 600;
     margin-bottom: 40px;
+    color: #0c0c0cfa;
+
 }
 
 h2 {
-    font-size: 30px;
+    font-size: 40px;
     font-weight: 600;
     margin: 60px 0px 10px 0px;
+    color: #0c0c0cfa;
+
 }
 
 h3 {
@@ -40,12 +44,15 @@ h3 {
     margin: 40px 0px 10px 0px;
     padding-bottom: 12px;
     border-bottom: 2px solid rgb(229,232,235);
+    color: #0c0c0cfa;
+
 }
 
 h4 {
     font-size: 20px;
     font-weight: 400;
     margin: 40px 0px 10px 0px;
+    color: #0c0c0cfa;}
 }
 
 ul {
@@ -99,7 +106,8 @@ hr {
 p {
     margin: 15px 0px 20px 0px;
     padding-right: 5px;
-}
+    text-align: center;
+    color: #0c0c0cfa;}
 
 .section {
     margin-bottom: 100px;
