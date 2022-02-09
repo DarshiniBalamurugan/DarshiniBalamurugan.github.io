@@ -23,15 +23,30 @@
         <form name User action = "firstpage.html" id = "form"> 
         <div class = "txt">
             <label for = "code"> <h3>Please Enter The Entry Code: </h3> </label>
-            <input id = "user" type = "text" name = "name" placeholder = "Code" required>
+            <input id = "password" type = "password" name = "name" placeholder = "Code" required>
             <p></p>
-            <button class = "btn" type = "submit" id="enter" onclick="getName(this.form)" > Enter </button>
+            <input type = "button" value="Enter" onclick="checkPswd();" >  
+            <!-- <button class = "btn" type = "submit" id="enter" onclick="checkPswd();" > Enter </button> -->
             <p></p>
         </div>
     </form>
         </div>
     </div>
-    <script type = "text/html" src = "firstpage.html"></script>
+    <script type="text/javascript">
+        function checkPswd() {
+            var confirmPassword = "pw";
+            var password = document.getElementById("password").value;
+            if (password == confirmPassword) {
+                 window.location="firstpage.html";
+            }
+            else{
+                alert("Code does not match.");
+                window.location="index.html";
+
+            }
+        }
+    </script>
+    <!-- <script type = "text/html" src = "firstpage.html"></script> -->
 </body>
 
 
