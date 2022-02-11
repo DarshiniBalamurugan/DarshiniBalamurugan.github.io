@@ -279,8 +279,14 @@ div.a {
     border: 3px solid #ddd;
     background-color: #eee;
   }
-  
+/*   
   input {
+    height: 2em;
+    width: 2em;
+    vertical-align: middle;
+  } */
+
+  #checkbox2 {
     height: 2em;
     width: 2em;
     vertical-align: middle;
