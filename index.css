@@ -53,18 +53,22 @@ h4 {
     font-weight: 400;
     margin: 40px 0px 10px 0px;
     color: #0c0c0cfa;}
-}
 
 ul {
-    display:table;
-    padding-left: 8%;
+    padding-left: 20%;
     margin: 0px 0px;
+    list-style-position: inside;
 }
 
 li {
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 15px;
+    text-align: left;
+    color: #0c0c0cfa;
+    list-style-position: inside;
+
 }
+
 
 li:first-of-type {
     margin-top: 0px;
@@ -204,7 +208,7 @@ div.a {
 
   #firstpagebutton {
     font-family: "Open Sans", sans-serif;
-    background: #353535fa;
+    background: #000000fa;
     color: #fffffffa;
     font-size: 18px;
     padding: 9px;
@@ -214,7 +218,7 @@ div.a {
 
   #enter {
     font-family: "Open Sans", sans-serif;
-    background: #353535fa;
+    background: #000000fa;
     color: #fffffffa;
     font-size: 18px;
     padding: 9px;
@@ -225,7 +229,7 @@ div.a {
 
   #submit {
     font-family: "Open Sans", sans-serif;
-    background: #353535fa;
+    background: #000000fa;
     color: #fffffffa;
     font-size: 18px;
     padding: 12px;
@@ -245,4 +249,39 @@ div.a {
     border-radius: 3px;
     width: 250px;
     font-size: 14px;
+  }
+
+  table {
+    width: 90%;
+    border: 1px solid black;
+    
+
+  }
+  
+  td {
+    height: 50px;
+    border: 1px solid black;
+    font-size: 17px;
+    text-align: center  ;
+    color: #0c0c0cfa;
+
+
+  }
+  .center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .tacbox {
+    display:block;
+    padding: 1em;
+    margin: 2em;
+    border: 3px solid #ddd;
+    background-color: #eee;
+  }
+  
+  input {
+    height: 2em;
+    width: 2em;
+    vertical-align: middle;
   }

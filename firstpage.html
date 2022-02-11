@@ -5,8 +5,14 @@
         <title>Audio Annotation</title>
         <style>
             h1 {text-align: center;}
-            p {text-align: center;}
+            h2 {text-align: center;}
+            h3 {text-align: center;}
             div {text-align: center;}
+            div {
+            padding-right: 50px;
+            padding-bottom: 50px;
+            padding-left: 50px;
+}
         </style>
         <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
@@ -18,11 +24,56 @@
 
     <body>
         <div class="wrapper">
-            <h1>Introduction</h1>
-            <p>This is a paragraph about the introduction of the project</p>
-            <p>By clicking next, you agree to participate in this survey</p>
+            <h3>FYP Project SCSE21-0956 - Understanding the impact of noise pollution on human health</h3>
+            <p style="text-align:center;">
+                The purpose of the research project is to study noise pollution in Singapore and understand how it affects the mental and physical health in humans. 
+                Noise pollution is defined as “regular exposure to elevated sound levels that may lead to adverse effects in humans”. The first part of the research
+                will analyze the common noises found in Singapore to determine the sound that is the dominant. Audio files will be shown and the following questions will
+                be asked. Please keep these definitions in mind when answering the question.
+                 </p> 
+                <br>
+                <table class="center" >
+                    <tr>
+                      <td>Question</td>
+                      <td>Definitions</td>
+                    </tr>
+                    <tr>
+                        <td>Please select the dominant noise you hear in the clip.</td>
+                        <td>Dominant Noise - The noise that stands out to you in the clip</td> 
+                      </tr>
+                      <tr>
+                        <td>Please select whether the noise is pleasant, unpleasant or neutral.</td>
+                        <td valign="left">Pleasant -  A noise that invokes a positive emotion in oneself
+                            <br>
+                            Unpleasant - A noise that invokes a negative emotion in oneself 
+                            <br>
+                            Neutral - A noise that invokes neither positive or negative emotions in oneself</td> 
+                      </tr>
+                </table>
+                <!-- <p style="text-align:center;"> You will be required to answer two questions:  </p> -->
+                <!-- <ul>
+                    <li>Please select the dominant noise you hear in the clip. A dominant noise refers to “the noise that stands out to you in the clip”.</li>
+                    <li>Please select whether the noise is pleasant, unpleasant or neutral. A pleasant noise is one that is “invokes a positive emotion in oneself 
+                    (ex.calmness/happiness)”. Unpleasant noise is one that “invokes a negative emotion in oneself (ex.irritation, annoyance)”. Neutral noise is one 
+                        that “does not invoke any positive or negative emotions in oneself”</li>
+                  </ul> -->
+            <br>
+            <br>
+       
+            <div class="tacbox">
+            <input id="checkbox" type="checkbox" />
+            <label>
+                <input type="checkbox"  class="checkbox" name="checkbox" value="checkbox" />
+                I acknowledge that I have read the above information, and hereby agree to provide honest and objective answers. My answers can be used for the purpose
+                of research in and beyond Nanyang Technological University.            
+            </label>
+            </div>
+
             <form method="get" action="main.html">
-                <button type="submit" id = "firstpagebutton">Let's Start </button>
+                <p><input type="checkbox" name="terms">  I acknowledge that I have read the above information, and hereby agree to provide honest and objective answers. My answers can be used for the purpose
+                    of research in and beyond Nanyang Technological University.</u></p>
+                <p><button type="submit" id = "firstpagebutton">Let's Start </button></p>
+                <!-- <button type="submit" id = "firstpagebutton">Let's Start </button> -->
             </form>
             <!-- <button class = "btn" type = "submit" > Let's Start </button> -->
                 <p></p>
@@ -33,25 +84,22 @@
                 window.history.forward();
             }
         </script>
-        <!-- <script type = "text/html" src = "main.html"></script> -->
+        <script>
+            function disableSubmit() {
+             document.getElementById("submit").disabled = true;
+            }
+           
+             function activateButton(element) {
+           
+                 if(element.checked) {
+                   document.getElementById("submit").disabled = false;
+                  }
+                  else  {
+                   document.getElementById("submit").disabled = true;
+                 }
+           
+             }
+           </script>
     </body>
-    <!-- <body>    
-        <div class = "wrapper">
-        <h1> Welcome to the Survey </h1>
-            <div id = startUp>
-            <form name User action = "firstpage.html" id = "form"> 
-            <div class = "txt">
-                <label for = "code"> <h3> Please Enter The Entry Code: </h3> </label>
-                <input id = "user" type = "text" name = "name" placeholder = "Code" required>
-                <p></p>
-                <button class = "btn" type = "submit" onclick="getName(this.form)" > Enter </button>
-                <p></p>
-            </div>
-        </form>
-            </div>
-        </div>
-        <script type = "text/html" src = "index.html"></script>
-    </body>
-     -->
     
     </html>
