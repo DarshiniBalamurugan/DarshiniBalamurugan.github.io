@@ -52,25 +52,23 @@
                 </table>
             <br>
             <br>
-       
+        </div>
+        <form name="tc" method="get" action="main.html">
+
             <div class="tacbox">
             <input id="checkbox" type="checkbox" />
             <label>
-                <input type="checkbox"  class="checkbox" name="checkbox" value="checkbox" />
+                <input type="checkbox"  id="checkbox2" class="checkbox" name="checkbox" value="yes" required />
                 I acknowledge that I have read the above information, and hereby agree to provide honest and objective answers. My answers can be used for the purpose
                 of research in and beyond Nanyang Technological University.            
             </label>
             </div>
-
-            <form method="get" action="main.html">
-                <p><input type="checkbox" id="checkbox2" name="terms">  I acknowledge that I have read the above information, and hereby agree to provide honest and objective answers. My answers can be used for the purpose
-                    of research in and beyond Nanyang Technological University.</u></p>
-                <p><button type="submit" id = "firstpagebutton">Let's Start </button></p>
+                <p><button type="submit" id = "firstpagebutton">Let's Start </button>
                 <!-- <button type="submit" id = "firstpagebutton">Let's Start </button> -->
             </form>
             <!-- <button class = "btn" type = "submit" > Let's Start </button> -->
-                <p></p>
-        </div>
+
+
         <script type="text/javascript">
             window.history.forward();
             function noBack() {
@@ -78,21 +76,15 @@
             }
         </script>
         <script>
-            function disableSubmit() {
-             document.getElementById("submit").disabled = true;
+            function validateForm() {
+                var checked = document.forms["tc"]["checkbox"].checked;
+                if (!checked) {
+                    alert("Oops! Please check the checkbox!");
+                    return "main.html";
             }
-           
-             function activateButton(element) {
-           
-                 if(element.checked) {
-                   document.getElementById("submit").disabled = false;
-                  }
-                  else  {
-                   document.getElementById("submit").disabled = true;
-                 }
-           
-             }
-           </script>
+        }
+        </script>
+
     </body>
     
     </html>
