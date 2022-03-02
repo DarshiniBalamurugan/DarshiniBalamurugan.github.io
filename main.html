@@ -448,7 +448,6 @@
     </div>
 
         <div style="float:center;">
-            <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
             <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
             <!-- <input type="submit" id="submit" value="Submit" /> -->
         </div>
@@ -501,6 +500,7 @@
         window.history.forward();
     }
 </script>
+
 <script type="text/javascript">
     
 var currentTab = 0; // Current tab is set to be the first tab (0)
@@ -511,12 +511,8 @@ function showTab(n) {
   var x = document.getElementsByClassName("tab");
   x[n].style.display = "block";
   // ... and fix the Previous/Next buttons:
-  if (n == 0) {
-    document.getElementById("prevBtn").style.display = "none";
-  } else {
-    document.getElementById("prevBtn").style.display = "inline";
-  }
-  if (n == (x.length - 1)) {
+
+  if (n == (1)) {
     document.getElementById("nextBtn").innerHTML = "Submit";
   } else {
     document.getElementById("nextBtn").innerHTML = "Next";
@@ -526,24 +522,26 @@ function showTab(n) {
     // this code will be running when the document is loaded
     showTab(currentTab); // Display the current tab
  
+    }
 }
 
 function nextPrev(n) {
   // This function will figure out which tab to display
   var x = document.getElementsByClassName("tab");
-  print(x)
-  // Exit the function if any field in the current tab is invalid:
-  if (n == 1 && !validateForm()) return false;
-  // Hide the current tab:
-  x[currentTab].style.display = "none";
-  // Increase or decrease the current tab by 1:
-  currentTab = currentTab + n;
-  // if you have reached the end of the form... :
-  if (currentTab >= x.length) {
-    //...the form gets submitted:
+//   print(x)
+//   // Exit the function if any field in the current tab is invalid:
+//   if (n == 1 ) 
+//   return false;
+//   // Hide the current tab:
+//   x[currentTab].style.display = "none";
+//   // Increase or decrease the current tab by 1:
+//   currentTab = currentTab + n;
+//   // if you have reached the end of the form... :
+//   if (currentTab >= 1) {
+//     //...the form gets submitted:
     document.getElementById("DominantNoise").submit();
     return false;
-  }
+//   }
   // Otherwise, display the correct tab:
   showTab(currentTab);
 }
@@ -552,92 +550,92 @@ function nextPrev(n) {
     </body>
 </html>
 
-<!-- 
-<script>
+// <!-- 
+// <script>
 
-function addRow() {
-   "use strict";
+// function addRow() {
+//    "use strict";
 
-    var table = document.getElementById("table");
-    var row= document.createElement("tr");
-    var td1 = document.createElement("td");
-    var td2 = document.createElement("td");
+//     var table = document.getElementById("table");
+//     var row= document.createElement("tr");
+//     var td1 = document.createElement("td");
+//     var td2 = document.createElement("td");
 
-    td1.innerHTML = document.getElementById("dominant_noise").value;
-    td2.innerHTML  = document.getElementById("sound_feel").value;
+//     td1.innerHTML = document.getElementById("dominant_noise").value;
+//     td2.innerHTML  = document.getElementById("sound_feel").value;
 
-    row.appendChild(td1);
-    row.appendChild(td2);
+//     row.appendChild(td1);
+//     row.appendChild(td2);
 
-    table.children[0].appendChild(row);
+//     table.children[0].appendChild(row);
 
-    downloadCSVFile(data.join("\n"), filename);
+//     downloadCSVFile(data.join("\n"), filename);
 
-};
+// };
 
-function htmlToCSV(html, filename) {
-            var data = [];
-            var rows = document.querySelectorAll("table tr");
+// function htmlToCSV(html, filename) {
+//             var data = [];
+//             var rows = document.querySelectorAll("table tr");
                     
-            for (var i = 0; i < rows.length; i++) {
-                var row = [], cols = rows[i].querySelectorAll("td, th");
+//             for (var i = 0; i < rows.length; i++) {
+//                 var row = [], cols = rows[i].querySelectorAll("td, th");
                         
-                for (var j = 0; j < cols.length; j++) {
-                        row.push(cols[j].innerText);
-                }
+//                 for (var j = 0; j < cols.length; j++) {
+//                         row.push(cols[j].innerText);
+//                 }
                         
-                data.push(row.join(",")); 		
-            }
+//                 data.push(row.join(",")); 		
+//             }
         
-            downloadCSVFile(data.join("\n"), filename);
-        }
+//             downloadCSVFile(data.join("\n"), filename);
+//         }
 
-function downloadCSV(csv, filename) {
-    var csvFile;
-    var downloadLink;
+// function downloadCSV(csv, filename) {
+//     var csvFile;
+//     var downloadLink;
 
-    // CSV file
-    csvFile = new Blob([csv], {type: "text/csv"});
+//     // CSV file
+//     csvFile = new Blob([csv], {type: "text/csv"});
 
-    // Download link
-    downloadLink = document.createElement("a");
+//     // Download link
+//     downloadLink = document.createElement("a");
 
-    // File name
-    downloadLink.download = filename;
+//     // File name
+//     downloadLink.download = filename;
 
-    // Create a link to the file
-    downloadLink.href = window.URL.createObjectURL(csvFile);
+//     // Create a link to the file
+//     downloadLink.href = window.URL.createObjectURL(csvFile);
 
-    // Hide download link
-    downloadLink.style.display = "none";
+//     // Hide download link
+//     downloadLink.style.display = "none";
 
-    // Add the link to DOM
-    document.body.appendChild(downloadLink);
+//     // Add the link to DOM
+//     document.body.appendChild(downloadLink);
 
-    // Click download link
-    downloadLink.click();
-}
-</script> -->
-<!-- 
+//     // Click download link
+//     downloadLink.click();
+// }
+// </script> -->
+// <!-- 
 
-        <h3 id = 'details'></h3>        
-        <div id = "word"></div>
-        <div id = "hint"></div>
-        <div id = "options">OPTIONS:
+//         <h3 id = 'details'></h3>        
+//         <div id = "word"></div>
+//         <div id = "hint"></div>
+//         <div id = "options">OPTIONS:
             
-            <div class = "option"><button type = "button" class = "btn" onclick = "checkAnswer()" id = "option1"></button></div>
+//             <div class = "option"><button type = "button" class = "btn" onclick = "checkAnswer()" id = "option1"></button></div>
             
-            <div class = "option"><button type = "button" class = "btn" onclick = "checkAnswer()" id = "option2"></button></div>
+//             <div class = "option"><button type = "button" class = "btn" onclick = "checkAnswer()" id = "option2"></button></div>
             
-            <div class = "option"><button type = "button" class = "btn" onclick = "checkAnswer()" id = "option3"></button></div>
+//             <div class = "option"><button type = "button" class = "btn" onclick = "checkAnswer()" id = "option3"></button></div>
             
-            <div class = "option"><button type = "button" class = "btn" onclick = "checkAnswer()" id = "option4"></button></div>
-        </div>
-        </div> 
-        <a id = "ready" onclick = "printQuestion()"  ><button id = "ready" class = "btn" type = "button" onclick = "startButton()"> START </button></a>
-    </div>
+//             <div class = "option"><button type = "button" class = "btn" onclick = "checkAnswer()" id = "option4"></button></div>
+//         </div>
+//         </div> 
+//         <a id = "ready" onclick = "printQuestion()"  ><button id = "ready" class = "btn" type = "button" onclick = "startButton()"> START </button></a>
+//     </div>
     
-    <a id = "restart" href = "index.html"><button id = "restart" type = "button" class = "btn" class = "restart">RESTART GAME</button></a>
+//     <a id = "restart" href = "index.html"><button id = "restart" type = "button" class = "btn" class = "restart">RESTART GAME</button></a>
     
-        </div>
-        <script type = "text/html" src = "index.html"></script> -->
+//         </div>
+//         <script type = "text/html" src = "index.html"></script> -->
