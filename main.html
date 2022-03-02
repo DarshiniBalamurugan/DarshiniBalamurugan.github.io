@@ -31,7 +31,7 @@
 
     <form action="endpage.html" name="DominantNoise" method="post"  data-netlify="true">
 
-        <div class = "row">
+        <div class = "data">
             <p>Please select your age group: </p>
                     <select name="age" id="age">
                       <option value="Nil"> </option>
@@ -445,7 +445,9 @@
         <br>
         <br>
         <br>
-        <input type="submit" id="submit" value="Submit" />
+        <div style="float:center;">
+            <input type="submit" id="submit" value="Submit" />
+        </div>
           </form>
 
           <script type="text/javascript">
@@ -516,6 +518,31 @@
     function noBack() {
         window.history.forward();
     }
+</script>
+<script type="text/javascript">
+    
+var currentTab = 0; // Current tab is set to be the first tab (0)
+showTab(currentTab); // Display the current tab
+
+function showTab(n) {
+  // This function will display the specified tab of the form ...
+  var x = document.getElementsByClassName("tab");
+  x[n].style.display = "block";
+  // ... and fix the Previous/Next buttons:
+  if (n == 0) {
+    document.getElementById("prevBtn").style.display = "none";
+  } else {
+    document.getElementById("prevBtn").style.display = "inline";
+  }
+  if (n == (x.length - 1)) {
+    document.getElementById("nextBtn").innerHTML = "Submit";
+  } else {
+    document.getElementById("nextBtn").innerHTML = "Next";
+  }
+  // ... and run a function that displays the correct step indicator:
+  fixStepIndicator(n)
+}
+
 </script>
         </div>
     </body>
