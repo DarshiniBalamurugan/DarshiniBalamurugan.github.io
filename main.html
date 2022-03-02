@@ -521,6 +521,10 @@ function showTab(n) {
   } else {
     document.getElementById("nextBtn").innerHTML = "Next";
   }
+
+  document.addEventListener("DOMContentLoaded", function(event) {
+    // this code will be running when the document is loaded
+    showTab(currentTab); // Display the current tab
  
 }
 
