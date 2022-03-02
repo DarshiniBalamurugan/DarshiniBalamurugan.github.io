@@ -205,6 +205,8 @@ div.a {
     width: 250px;
     font-size: 14px;
   }
+  
+
 
   #firstpagebutton {
     font-family: "Open Sans", sans-serif;
@@ -250,6 +252,9 @@ div.a {
     width: 250px;
     font-size: 14px;
   }
+  
+  select option:first-child { color:red; }
+
 
   table {
     width: 90%;

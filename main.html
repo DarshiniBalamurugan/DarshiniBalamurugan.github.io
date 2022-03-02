@@ -14,6 +14,21 @@
             flex: 50%;
             }
         </style>
+        <!-- <style>
+            select option:hover,
+            select option:focus,
+            select option:active {
+                background-color: lightpink !important;
+  /* for IE */
+  color: #ffed00 !important;
+}
+
+select option:checked {
+  background-color: green !important;
+  /* for IE */
+  color: #000000 !important;
+} 
+        </style> -->
         <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="index.css">
@@ -32,23 +47,26 @@
 
         <div class="tab">
             <p>Please select your age group: </p>
-                    <select name="age" id="age">
-                      <option value="Nil"> </option>
+            <input type="hidden" id="age" name="age" value!="">
+                    <select name="age" id="lang">
+                      <option value="Nil">--Select-- </option>
                       <option value="18 and below">18 and below</option>
                       <option value="18-35">18-35</option>
                       <option value="36-55">36-55</option>
                       <option value="56 and above">56 and above</option>
                     </select>
             <p>Please select your gender: </p>
-                    <select name="gender" id="gender">
-                      <option value="Nil"> </option>
+            <input type="hidden" id="gender" name="gender" value!="">
+                    <select name="gender" id="lang">
+                      <option value="Nil"> --Select--</option>
                       <option value="Male">Male</option>
                       <option value="Female">Female</option>
                       <option value="Prefer not to say">Prefer not to say</option>
                     </select>
             <p>Please select your ethnicity: </p>
-                      <select name="ethnicity" id="ethnicity">
-                        <option value="Nil"> </option>
+            <input type="hidden" id="ethnicity" name="ethnicity" value!="">
+                      <select name="ethnicity" id="lang">
+                        <option value="Nil"> --Select--</option>
                         <option value="Chinese">Chinese</option>
                         <option value="Malay">Malay</option>
                         <option value="Indian">Indian</option>
@@ -80,7 +98,7 @@
             <div class="column">
                 <input type="hidden" id="file_name1" name="file_name1" value="">
                 <select name="noise1" id="lang">
-                  <option value="Nil"> </option>
+                  <option value="Nil"> --Select--</option>
                   <option value="DogBarking">Dog Barking</option>
                   <option value="Rain">Rain</option>
                   <option value="Crickets">Crickets</option>
@@ -99,7 +117,7 @@
             </div>
             <div class="column">
                 <select name="pleasant1" id="lang">
-                  <option value="Nil"> </option>
+                  <option value="Nil"> --Select--</option>
                   <option value="Pleasant">Pleasant</option>
                   <option value="Unpleasant">Unpleasant</option>
                   <option value="Neutral">Neutral</option>
@@ -117,7 +135,7 @@
             <div class="column">
                 <input type="hidden" id="file_name2" name="file_name2" value="">
                 <select name="noise2" id="lang">
-                  <option value="Nil"> </option>
+                  <option value="Nil"> --Select--</option>
                   <option value="DogBarking">Dog Barking</option>
                   <option value="Rain">Rain</option>
                   <option value="Crickets">Crickets</option>
@@ -136,7 +154,7 @@
             </div>
             <div class="column">
                 <select name="pleasant2" id="lang">
-                    <option value="Nil"> </option>
+                    <option value="Nil">--Select-- </option>
                   <option value="Pleasant">Pleasant</option>
                   <option value="Unpleasant">Unpleasant</option>
                   <option value="Neutral">Neutral</option>
@@ -154,7 +172,7 @@
             <div class="column">
                 <input type="hidden" id="file_name3" name="file_name3" value="">
                 <select name="noise3" id="lang">
-                    <option value="Nil"> </option>
+                    <option value="Nil"> --Select--</option>
                   <option value="DogBarking">Dog Barking</option>
                   <option value="Rain">Rain</option>
                   <option value="Crickets">Crickets</option>
@@ -173,7 +191,7 @@
             </div>
             <div class="column">
                 <select name="pleasant3" id="lang">
-                    <option value="Nil"> </option>
+                    <option value="Nil"> --Select--</option>
                   <option value="Pleasant">Pleasant</option>
                   <option value="Unpleasant">Unpleasant</option>
                   <option value="Neutral">Neutral</option>
@@ -191,7 +209,7 @@
             <div class="column">
                 <input type="hidden" id="file_name4" name="file_name4" value="">
                 <select name="noise4" id="lang">
-                    <option value="Nil"> </option>
+                    <option value="Nil"> --Select--</option>
                   <option value="DogBarking">Dog Barking</option>
                   <option value="Rain">Rain</option>
                   <option value="Crickets">Crickets</option>
@@ -210,7 +228,7 @@
             </div>
             <div class="column">
                 <select name="pleasant4" id="lang">
-                    <option value="Nil"> </option>
+                    <option value="Nil"> --Select--</option>
                   <option value="Pleasant">Pleasant</option>
                   <option value="Unpleasant">Unpleasant</option>
                   <option value="Neutral">Neutral</option>
@@ -228,7 +246,7 @@
             <div class="column">
                 <input type="hidden" id="file_name5" name="file_name5" value="">
                 <select name="noise5" id="lang">
-                    <option value="Nil"> </option>
+                    <option value="Nil"> --Select--</option>
                   <option value="DogBarking">Dog Barking</option>
                   <option value="Rain">Rain</option>
                   <option value="Crickets">Crickets</option>
@@ -247,7 +265,7 @@
             </div>
             <div class="column">
                 <select name="pleasant5" id="lang">
-                    <option value="Nil"> </option>
+                    <option value="Nil"> --Select--</option>
                   <option value="Pleasant">Pleasant</option>
                   <option value="Unpleasant">Unpleasant</option>
                   <option value="Neutral">Neutral</option>
@@ -266,7 +284,7 @@
             <div class="column">
                 <input type="hidden" id="file_name6" name="file_name6" value="">
                 <select name="noise6" id="lang">
-                    <option value="Nil"> </option>
+                    <option value="Nil">--Select-- </option>
                   <option value="DogBarking">Dog Barking</option>
                   <option value="Rain">Rain</option>
                   <option value="Crickets">Crickets</option>
@@ -285,7 +303,7 @@
             </div>
             <div class="column">
                 <select name="pleasant6" id="lang">
-                    <option value="Nil"> </option>
+                    <option value="Nil"> --Select--</option>
                   <option value="Pleasant">Pleasant</option>
                   <option value="Unpleasant">Unpleasant</option>
                   <option value="Neutral">Neutral</option>
@@ -303,7 +321,7 @@
             <div class="column">
                 <input type="hidden" id="file_name7" name="file_name7" value="">
                 <select name="noise7" id="lang">
-                    <option value="Nil"> </option>
+                    <option value="Nil"> --Select--</option>
                   <option value="DogBarking">Dog Barking</option>
                   <option value="Rain">Rain</option>
                   <option value="Crickets">Crickets</option>
@@ -322,7 +340,7 @@
             </div>
             <div class="column">
                 <select name="pleasant7" id="lang">
-                    <option value="Nil"> </option>
+                    <option value="Nil"> --Select--</option>
                   <option value="Pleasant">Pleasant</option>
                   <option value="Unpleasant">Unpleasant</option>
                   <option value="Neutral">Neutral</option>
@@ -340,7 +358,7 @@
             <div class="column">
                 <input type="hidden" id="file_name8" name="file_name8" value="">
                 <select name="noise8" id="lang">
-                    <option value="Nil"> </option>
+                    <option value="Nil"> --Select--</option>
                   <option value="DogBarking">Dog Barking</option>
                   <option value="Rain">Rain</option>
                   <option value="Crickets">Crickets</option>
@@ -359,7 +377,7 @@
             </div>
             <div class="column">
                 <select name="pleasant8" id="lang">
-                    <option value="Nil"> </option>
+                    <option value="Nil"> --Select--</option>
                   <option value="Pleasant">Pleasant</option>
                   <option value="Unpleasant">Unpleasant</option>
                   <option value="Neutral">Neutral</option>
@@ -377,7 +395,7 @@
             <div class="column">
                 <input type="hidden" id="file_name9" name="file_name9" value="">
                 <select name="noise9" id="lang">
-                    <option value="Nil"> </option>
+                    <option value="Nil"> --Select--</option>
                   <option value="DogBarking">Dog Barking</option>
                   <option value="Rain">Rain</option>
                   <option value="Crickets">Crickets</option>
@@ -396,7 +414,7 @@
             </div>
             <div class="column">
                 <select name="pleasant9" id="lang">
-                    <option value="Nil"> </option>
+                    <option value="Nil">--Select-- </option>
                   <option value="Pleasant">Pleasant</option>
                   <option value="Unpleasant">Unpleasant</option>
                   <option value="Neutral">Neutral</option>
@@ -414,7 +432,7 @@
             <div class="column">
                 <input type="hidden" id="file_name10" name="file_name10" value="">
                 <select name="noise10" id="lang">
-                    <option value="Nil"> </option>
+                    <option value="Nil"> --Select--</option>
                   <option value="DogBarking">Dog Barking</option>
                   <option value="Rain">Rain</option>
                   <option value="Crickets">Crickets</option>
@@ -433,7 +451,7 @@
             </div>
             <div class="column">
                 <select name="pleasant10" id="lang">
-                    <option value="Nil"> </option>
+                    <option value="Nil"> --Select--</option>
                   <option value="Pleasant">Pleasant</option>
                   <option value="Unpleasant">Unpleasant</option>
                   <option value="Neutral">Neutral</option>
@@ -474,9 +492,8 @@
     function nextPrev(n) {
       // This function will figure out which tab to display
       var x = document.getElementsByClassName("tab");
-    //   // Exit the function if any field in the current tab is invalid:
-    //   if (n == 1 ) 
-    //   return false;
+        // Exit the function if any field in the current tab is invalid:
+//   if (!validate()) return false;
       // Hide the current tab:
       x[currentTab].style.display = "none";
       // Increase or decrease the current tab by 1:
@@ -489,7 +506,43 @@
       // Otherwise, display the correct tab:
       showTab(currentTab);
     }
-    
+
+//     function validate() {
+//  if (document.DominantNoise.lang.value == "Nil") {
+//     alert("Please select a card type");
+//     document.DominantNoise.lang.focus();
+// }
+// else {
+//     return true
+// }
+//     }
+// function validate()
+// {
+//  var ddl = document.getElementById("lang1");
+//  var selectedValue = ddl.options[ddl.selectedIndex].value;
+//     if (selectedValue == "Nil")
+//    {
+//     alert("Please select a value");
+//     return false;
+//    }
+//    var ddl2 = document.getElementById("lang2");
+//  var selectedValue2 = ddl2.options[ddl2.selectedIndex].value;
+//     if (selectedValue2 == "Nil")
+//    {
+//     alert("Please select a value");
+//     return false;
+//    }
+
+// var ddl3 = document.getElementById("lang3");
+//  var selectedValue3 = ddl3.options[ddl3.selectedIndex].value;
+//     if (selectedValue3 == "Nil")
+//    {
+//     alert("Please select a value");
+//     return false;
+//    }
+
+// }
+
     </script>
 
           <script type="text/javascript">
