@@ -305,3 +305,7 @@ div.a {
 
 
   }
+
+  .tab {
+    display: none;
+  }

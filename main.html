@@ -23,10 +23,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-    <div class="wrapper">
+    <!-- <div class="wrapper">
             <h2>Please listen and answer the questions</h2>
             <br>
-    </div>
+    </div> -->
 
     <form action="endpage.html" id = "DominantNoise" name="DominantNoise" method="post"  data-netlify="true">
 
@@ -49,11 +49,11 @@
             <p>Please select your ethnicity: </p>
                       <select name="ethnicity" id="ethnicity">
                         <option value="Nil"> </option>
-                        <option value="Chinese">Male</option>
-                        <option value="Malay">Female</option>
-                        <option value="Indian">Prefer not to say</option>
-                        <option value="Eurasian">Prefer not to say</option>
-                        <option value="Others">Prefer not to say</option>
+                        <option value="Chinese">Chinese</option>
+                        <option value="Malay">Malay</option>
+                        <option value="Indian">Indian</option>
+                        <option value="Eurasian">Eurasian</option>
+                        <option value="Others">Others</option>
                     </select>
             </div>
 
@@ -71,7 +71,6 @@
         </div>
 
 
-        <!-- copy this ten times, change filearray.length to 10 and add all 100++ files name to filearray-->
         <div class="row"> 
             <div class="column">
                 <audio id="music1" autoplay controls>
@@ -454,6 +453,44 @@
           
           </form>
 
+
+<script type="text/javascript">
+    var currentTab = 0; // Current tab is set to be the first tab (0)
+    showTab(currentTab); // Display the current tab
+    
+    function showTab(n) {
+      // This function will display the specified tab of the form ...
+      var x = document.getElementsByClassName("tab");
+      x[n].style.display = "block";
+      if (n == (x.length - 1)) {
+        document.getElementById("nextBtn").innerHTML = "Submit";
+      } else {
+        document.getElementById("nextBtn").innerHTML = "Next";
+      }
+        }
+    
+    
+    function nextPrev(n) {
+      // This function will figure out which tab to display
+      var x = document.getElementsByClassName("tab");
+    //   // Exit the function if any field in the current tab is invalid:
+    //   if (n == 1 ) 
+    //   return false;
+      // Hide the current tab:
+      x[currentTab].style.display = "none";
+      // Increase or decrease the current tab by 1:
+      currentTab = currentTab + n;
+      // if you have reached the end of the form... :
+      if (currentTab >= x.length) {
+        document.getElementById("DominantNoise").submit();
+        return false;
+      }
+      // Otherwise, display the correct tab:
+      showTab(currentTab);
+    }
+    
+    </script>
+
           <script type="text/javascript">
             function myFunction() {
                 fileArray = [
@@ -501,141 +538,5 @@
     }
 </script>
 
-<script type="text/javascript">
-    
-var currentTab = 0; // Current tab is set to be the first tab (0)
-showTab(currentTab); // Display the current tab
-
-function showTab(n) {
-  // This function will display the specified tab of the form ...
-  var x = document.getElementsByClassName("tab");
-  x[n].style.display = "block";
-  // ... and fix the Previous/Next buttons:
-
-  if (n == (1)) {
-    document.getElementById("nextBtn").innerHTML = "Submit";
-  } else {
-    document.getElementById("nextBtn").innerHTML = "Next";
-  }
-
-  document.addEventListener("DOMContentLoaded", function(event) {
-    // this code will be running when the document is loaded
-    showTab(currentTab); // Display the current tab
- 
-    }
-}
-
-function nextPrev(n) {
-  // This function will figure out which tab to display
-  var x = document.getElementsByClassName("tab");
-//   print(x)
-//   // Exit the function if any field in the current tab is invalid:
-//   if (n == 1 ) 
-//   return false;
-//   // Hide the current tab:
-//   x[currentTab].style.display = "none";
-//   // Increase or decrease the current tab by 1:
-//   currentTab = currentTab + n;
-//   // if you have reached the end of the form... :
-//   if (currentTab >= 1) {
-//     //...the form gets submitted:
-    document.getElementById("DominantNoise").submit();
-    return false;
-//   }
-  // Otherwise, display the correct tab:
-  showTab(currentTab);
-}
-
-</script>
     </body>
 </html>
-
-// <!-- 
-// <script>
-
-// function addRow() {
-//    "use strict";
-
-//     var table = document.getElementById("table");
-//     var row= document.createElement("tr");
-//     var td1 = document.createElement("td");
-//     var td2 = document.createElement("td");
-
-//     td1.innerHTML = document.getElementById("dominant_noise").value;
-//     td2.innerHTML  = document.getElementById("sound_feel").value;
-
-//     row.appendChild(td1);
-//     row.appendChild(td2);
-
-//     table.children[0].appendChild(row);
-
-//     downloadCSVFile(data.join("\n"), filename);
-
-// };
-
-// function htmlToCSV(html, filename) {
-//             var data = [];
-//             var rows = document.querySelectorAll("table tr");
-                    
-//             for (var i = 0; i < rows.length; i++) {
-//                 var row = [], cols = rows[i].querySelectorAll("td, th");
-                        
-//                 for (var j = 0; j < cols.length; j++) {
-//                         row.push(cols[j].innerText);
-//                 }
-                        
-//                 data.push(row.join(",")); 		
-//             }
-        
-//             downloadCSVFile(data.join("\n"), filename);
-//         }
-
-// function downloadCSV(csv, filename) {
-//     var csvFile;
-//     var downloadLink;
-
-//     // CSV file
-//     csvFile = new Blob([csv], {type: "text/csv"});
-
-//     // Download link
-//     downloadLink = document.createElement("a");
-
-//     // File name
-//     downloadLink.download = filename;
-
-//     // Create a link to the file
-//     downloadLink.href = window.URL.createObjectURL(csvFile);
-
-//     // Hide download link
-//     downloadLink.style.display = "none";
-
-//     // Add the link to DOM
-//     document.body.appendChild(downloadLink);
-
-//     // Click download link
-//     downloadLink.click();
-// }
-// </script> -->
-// <!-- 
-
-//         <h3 id = 'details'></h3>        
-//         <div id = "word"></div>
-//         <div id = "hint"></div>
-//         <div id = "options">OPTIONS:
-            
-//             <div class = "option"><button type = "button" class = "btn" onclick = "checkAnswer()" id = "option1"></button></div>
-            
-//             <div class = "option"><button type = "button" class = "btn" onclick = "checkAnswer()" id = "option2"></button></div>
-            
-//             <div class = "option"><button type = "button" class = "btn" onclick = "checkAnswer()" id = "option3"></button></div>
-            
-//             <div class = "option"><button type = "button" class = "btn" onclick = "checkAnswer()" id = "option4"></button></div>
-//         </div>
-//         </div> 
-//         <a id = "ready" onclick = "printQuestion()"  ><button id = "ready" class = "btn" type = "button" onclick = "startButton()"> START </button></a>
-//     </div>
-    
-//     <a id = "restart" href = "index.html"><button id = "restart" type = "button" class = "btn" class = "restart">RESTART GAME</button></a>
-    
-//         </div>
-//         <script type = "text/html" src = "index.html"></script> -->
