@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Audio Annotation</title>
+    <style>
+        h1 {text-align: center;}
+        p {text-align: center;}
+        div {text-align: center;}
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="index.css">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>    
+    <form action="main.html" name="DominantNoise" method="post"  data-netlify="true">
+    <div class = "data">
+        <p>Please select your age group: </p>
+                <select name="age" id="age">
+                  <option value="Nil"> </option>
+                  <option value="18 and below">18 and below</option>
+                  <option value="18-35">18-35</option>
+                  <option value="36-55">36-55</option>
+                  <option value="56 and above">56 and above</option>
+                <select name="gender" id="gender">
+                  <option value="Nil"> </option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Prefer not to say">Prefer not to say</option>
+                  <select name="ethnicity" id="ethnicity">
+                    <option value="Nil"> </option>
+                    <option value="Chinese">Male</option>
+                    <option value="Malay">Female</option>
+                    <option value="Indian">Prefer not to say</option>
+                    <option value="Eurasian">Prefer not to say</option>
+                    <option value="Others">Prefer not to say</option>
+
+        </div>
+        <br>
+        <br>
+        <br>
+        <input type="submit" id="submit" value="send" />
+
+    </form>
+    <script type="text/javascript">
+        function checkPswd() {
+            var confirmPassword = "pw";
+            var password = document.getElementById("password").value;
+            if (password == confirmPassword) {
+                 window.location="firstpage.html";
+            }
+            else{
+                alert("Code does not match.");
+                window.location="index.html";
+            }
+        }
+    </script>
+    <script type="text/javascript">
+        window.history.forward();
+        function noBack() {
+            window.history.forward();
+        }
+    </script>
+</body>
+</html>
