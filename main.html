@@ -498,54 +498,17 @@ select option:checked {
       // Increase or decrease the current tab by 1:
       currentTab = currentTab + n;
       // if you have reached the end of the form... :
-      if (currentTab >= x.length) {
-        // document.getElementById("DominantNoise").submit();
-        return false;
-      }
+    //   if (currentTab >= x.length) {
+    //     // document.getElementById("DominantNoise").submit();
+    //     return false;
+    //   }
       // Otherwise, display the correct tab:
       showTab(currentTab);
     }
 
     function nextPage(){
-        window.location.href='endpage.html';
+        window.location.href="endpage.html";
     }
-
-//     function validate() {
-//  if (document.DominantNoise.lang.value == "Nil") {
-//     alert("Please select a card type");
-//     document.DominantNoise.lang.focus();
-// }
-// else {
-//     return true
-// }
-//     }
-// function validate()
-// {
-//  var ddl = document.getElementById("lang1");
-//  var selectedValue = ddl.options[ddl.selectedIndex].value;
-//     if (selectedValue == "Nil")
-//    {
-//     alert("Please select a value");
-//     return false;
-//    }
-//    var ddl2 = document.getElementById("lang2");
-//  var selectedValue2 = ddl2.options[ddl2.selectedIndex].value;
-//     if (selectedValue2 == "Nil")
-//    {
-//     alert("Please select a value");
-//     return false;
-//    }
-
-// var ddl3 = document.getElementById("lang3");
-//  var selectedValue3 = ddl3.options[ddl3.selectedIndex].value;
-//     if (selectedValue3 == "Nil")
-//    {
-//     alert("Please select a value");
-//     return false;
-//    }
-
-// }
-
     </script>
 
           <script type="text/javascript">
