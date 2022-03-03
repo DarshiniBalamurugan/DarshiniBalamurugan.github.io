@@ -14,20 +14,6 @@
             flex: 50%;
             }
         </style>
-        <!-- <style>
-            select option:hover,
-            select option:focus,
-            select option:active {
-                background-color: lightpink !important;
-  /* for IE */
-  color: #ffed00 !important;
-}
-
-select option:checked {
-  background-color: green !important;
-  /* for IE */
-  color: #000000 !important;
-} 
         </style> -->
         <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
@@ -43,7 +29,7 @@ select option:checked {
             <br>
     </div> -->
 
-    <form action="endpage.html" id = "DominantNoise" name="DominantNoise" method="post"  data-netlify="true">
+    <form id = "DominantNoise" name="DominantNoise" method="post"  data-netlify="true">
 
         <div class="tab">
             <p>Please select your age group: </p>
@@ -507,10 +493,10 @@ select option:checked {
     }
 
     function nextPage(){
-        window.location.href="endpage.html";
+        // window.location.href="endpage.html";
+        document.getElementById('DominantNoise').action = 'endpage.html';
     }
     </script>
-
           <script type="text/javascript">
             function myFunction() {
                 fileArray = [
