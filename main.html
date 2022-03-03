@@ -29,7 +29,7 @@
             <br>
     </div> -->
 
-    <form action ='' onsubmit="nextPage()" id = "DominantNoise" name="DominantNoise" method="post"  data-netlify="true">
+    <form action ='' id = "DominantNoise" name="DominantNoise" method="post"  data-netlify="true">
 
         <div class="tab">
             <p>Please select your age group: </p>
@@ -451,7 +451,7 @@
     </div>
         <div style="float:center;">
             <button type="button" id="nextBtn" onclick="nextPrev(1)" >Next</button>
-            <input type="submit" id="nextpage"  value="Go" hidden="true"  /> 
+            <input type="submit" id="nextpage"  value="Go" onclick = 'this.form.action="endpage.html";' hidden="true"  /> 
         </div>
           </form>
 
@@ -459,24 +459,22 @@
 <script type="text/javascript">
     var currentTab = 0; // Current tab is set to be the first tab (0)
     showTab(currentTab); // Display the current tab
-    console.log("currenttab above")
-    console.log(currentTab)
 
     function showTab(n) {
       // This function will display the specified tab of the form ...
       var x = document.getElementsByClassName("tab");
       x[n].style.display = "block";
-      console.log("length of x")
-      console.log(x.length)
-      if (n == (x.length - 1)) {
-          console.log(n)
+      if (n == (1)) {
         document.getElementById("nextpage").hidden = false;
         document.getElementById("nextBtn").hidden = true;
+        document.getElementById("nextBtn").disabled = true;
+
         // document.getElementById("submit").disabled = false;
         // document.getElementById("nextBtn").innerHTML = "Submit";
-      } else {
-        document.getElementById("nextBtn").innerHTML = "Next";
-      }
+      } 
+    //   else {
+    //     document.getElementById("nextBtn").innerHTML = "Next";
+    //   }
         }
     
     
@@ -486,10 +484,8 @@
       // Hide the current tab:
       x[currentTab].style.display = "none";
       // Increase or decrease the current tab by 1:
-      console.log("currenttab")
-      console.log (currentTab)
       currentTab = currentTab + n;
-      // if you have reached the end of the form... :
+    // if you have reached the end of the form... :
     //   if (currentTab >= x.length) {
     //     // document.getElementById("DominantNoise").submit();
     //     return false;
