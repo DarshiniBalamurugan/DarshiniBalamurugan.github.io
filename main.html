@@ -465,7 +465,7 @@ select option:checked {
     </div>
         <div style="float:center;">
             <button type="button" id="nextBtn" onclick="nextPrev(1)" >Next</button>
-            <input type="submit" id="submit"  value="Submit" hidden="true"  /> 
+            <input type="submit" id="submit"  value="Submit" onclick = "nextPage()" hidden="true"  /> 
         </div>
           
           </form>
@@ -504,6 +504,10 @@ select option:checked {
       }
       // Otherwise, display the correct tab:
       showTab(currentTab);
+    }
+
+    function nextPage(){
+        window.location.href='endpage.html';
     }
 
 //     function validate() {
