@@ -463,11 +463,9 @@ select option:checked {
         <br>
         <br>
     </div>
-
-
         <div style="float:center;">
-            <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
-            <!-- <input type="submit" id="submit" value="Submit" /> -->
+            <button type="button" id="nextBtn" onclick="nextPrev(1)" >Next</button>
+            <input type="submit" id="submit"  value="Submit" hidden="true"  /> 
         </div>
           
           </form>
@@ -482,7 +480,10 @@ select option:checked {
       var x = document.getElementsByClassName("tab");
       x[n].style.display = "block";
       if (n == (x.length - 1)) {
-        document.getElementById("nextBtn").innerHTML = "Submit";
+        document.getElementById("submit").hidden = false;
+        document.getElementById("nextBtn").hidden = true;
+        // document.getElementById("submit").disabled = false;
+        // document.getElementById("nextBtn").innerHTML = "Submit";
       } else {
         document.getElementById("nextBtn").innerHTML = "Next";
       }
@@ -492,15 +493,13 @@ select option:checked {
     function nextPrev(n) {
       // This function will figure out which tab to display
       var x = document.getElementsByClassName("tab");
-        // Exit the function if any field in the current tab is invalid:
-//   if (!validate()) return false;
       // Hide the current tab:
       x[currentTab].style.display = "none";
       // Increase or decrease the current tab by 1:
       currentTab = currentTab + n;
       // if you have reached the end of the form... :
       if (currentTab >= x.length) {
-        document.getElementById("DominantNoise").submit();
+        // document.getElementById("DominantNoise").submit();
         return false;
       }
       // Otherwise, display the correct tab:
