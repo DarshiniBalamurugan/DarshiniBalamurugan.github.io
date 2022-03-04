@@ -24,37 +24,7 @@
 
     <body>
         <div class="wrapper">
-            <h2>FYP Project  - Understanding the impact of noise pollution on human health</h2>
-            <p style="text-align:center;">
-                The purpose of the research project is to study noise pollution in Singapore and understand how it affects the mental and physical health in humans. 
-                Noise pollution is defined as “regular exposure to elevated sound levels that may lead to adverse effects in humans”. The first part of the research
-                will analyze the common noises found in Singapore to determine the sound that is the dominant. Audio files will be shown and the following questions will
-                be asked. Please keep these definitions in mind when answering the question.
-                 </p> 
-                <br>
-                <table class="center" >
-                    <tr>
-                      <td>Question</td>
-                      <td>Definitions</td>
-                    </tr>
-                    <tr>
-                        <td>Please select the dominant noise you hear in the clip.</td>
-                        <td>Dominant Noise - The noise that stands out to you in the clip</td> 
-                      </tr>
-                      <tr>
-                        <td>Please select whether the noise is pleasant, unpleasant or neutral.</td>
-                        <td valign="left">Pleasant -  A noise that invokes a positive emotion in oneself
-                            <br>
-                            Unpleasant - A noise that invokes a negative emotion in oneself 
-                            <br>
-                            Neutral - A noise that invokes neither positive or negative emotions in oneself</td> 
-                      </tr>
-                </table>
-            <br>
-            <br>
-        </div>
-
-            <!-- <h3>A</h3>
+            <h3>Consent Form</h3>
             <h4 style="text-align: center;"> <u>Right to Refuse or Withdraw:</u></h4>
             <p style="text-align:center;">
                 Your participation in this study is voluntary and you may choose not to participate. 
@@ -76,7 +46,7 @@
                 Only the researchers for this study will have access to the records. 
             </p>
         </div>
-        <form name="tc" method="get" action="main.html">
+        <form name="tc" method="get" action="firstpage.html">
 
             <div class="tacbox">
             <input id="checkbox" type="checkbox" />
@@ -94,11 +64,11 @@ from that data and other information which an organisation has or likely to have
 Research arising in the future, based on this “Personal Data”, will be subject to review by the relevant institutional review board. 
 Data collected are the property of Nanyang Techological University. In the event of any publication regarding this study, your identity will remain confidential.              
             </label>
-            </div> -->
-            <form name="tc" method="get" action="main.html">
+            </div>
                 <p><button type="submit" id = "firstpagebutton">Let's Start </button>
-                    </p>
+                <!-- <button type="submit" id = "firstpagebutton">Let's Start </button> -->
             </form>
+            <!-- <button class = "btn" type = "submit" > Let's Start </button> -->
 
 
         <script type="text/javascript">
@@ -112,7 +82,7 @@ Data collected are the property of Nanyang Techological University. In the event
                 var checked = document.forms["tc"]["checkbox"].checked;
                 if (!checked) {
                     alert("Oops! Please check the checkbox!");
-                    return "main.html";
+                    return "firstpage.html";
             }
         }
         </script>
