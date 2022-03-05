@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
         <title>Audio Annotation</title>
         <style>
@@ -13,6 +14,7 @@
             flex: 50%;
             }
         </style>
+        </style> 
         <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="index.css">
@@ -22,15 +24,54 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-    <div class="wrapper">
-            <h2>Audio Annotation</h2>
-                <h3>Samples</h3>
+    <!-- <div class="wrapper">
             <h2>Please listen and answer the questions</h2>
             <br>
-    </div>
-    <div class="question">
+    </div> -->
 
-    <form action="endpage.html" name="DominantNoise" method="post"  data-netlify="true">
+    <form  id = "DominantNoise" name="DominantNoise" method="POST" action="endpage.html" netlify-honeypot="bot-field" netlify data-netlify="true">
+
+        <div class="tab">
+            <p>Please select your age group: </p>
+            <input type="hidden" id="age" name="age" value!="">
+                    <select name="age" id="lang">
+                      <option value="Nil">--Select-- </option>
+                      <option value="18 and below">18 and below</option>
+                      <option value="18-35">18-35</option>
+                      <option value="36-55">36-55</option>
+                      <option value="56 and above">56 and above</option>
+                    </select>
+            <p>Please select your gender: </p>
+            <input type="hidden" id="gender" name="gender" value!="">
+                    <select name="gender" id="lang">
+                      <option value="Nil"> --Select--</option>
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
+                      <option value="Prefer not to say">Prefer not to say</option>
+                    </select>
+            <p>Please select your ethnicity: </p>
+            <input type="hidden" id="ethnicity" name="ethnicity" value!="">
+                      <select name="ethnicity" id="lang">
+                        <option value="Nil"> --Select--</option>
+                        <option value="Chinese">Chinese</option>
+                        <option value="Malay">Malay</option>
+                        <option value="Indian">Indian</option>
+                        <option value="Eurasian">Eurasian</option>
+                        <option value="Others">Others</option>
+                    </select>
+                    <p>Please select your ethnicity: </p>
+            <input type="hidden" id="test" name="test" value!="">
+                      <select name="test" id="lang">
+                        <option value="Nil"> --Select--</option>
+                        <option value="Chinese">Chinese</option>
+                        <option value="Malay">Malay</option>
+                        <option value="Indian">Indian</option>
+                        <option value="Eurasian">Eurasian</option>
+                        <option value="Others">Others</option>
+                    </select>
+        </div>
+
+    <div class="tab">
         <div class="row"> 
             <div class="column">
             </div>
@@ -41,7 +82,8 @@
                 <p>How does the noise feel to you?</p>
             </div>
         </div>
-        <!-- copy this ten times, change filearray.length to 10 and add all 100++ files name to filearray-->
+
+
         <div class="row"> 
             <div class="column">
                 <audio id="music1" autoplay controls>
@@ -51,6 +93,7 @@
             <div class="column">
                 <input type="hidden" id="file_name1" name="file_name1" value="">
                 <select name="noise1" id="lang">
+                  <option value="Nil"> --Select--</option>
                   <option value="DogBarking">Dog Barking</option>
                   <option value="Rain">Rain</option>
                   <option value="Crickets">Crickets</option>
@@ -69,6 +112,7 @@
             </div>
             <div class="column">
                 <select name="pleasant1" id="lang">
+                  <option value="Nil"> --Select--</option>
                   <option value="Pleasant">Pleasant</option>
                   <option value="Unpleasant">Unpleasant</option>
                   <option value="Neutral">Neutral</option>
@@ -76,6 +120,7 @@
                 </select>   
             </div>
         </div>
+
         <div class="row"> 
             <div class="column">
                 <audio id="music2" autoplay controls>
@@ -85,6 +130,7 @@
             <div class="column">
                 <input type="hidden" id="file_name2" name="file_name2" value="">
                 <select name="noise2" id="lang">
+                  <option value="Nil"> --Select--</option>
                   <option value="DogBarking">Dog Barking</option>
                   <option value="Rain">Rain</option>
                   <option value="Crickets">Crickets</option>
@@ -103,6 +149,7 @@
             </div>
             <div class="column">
                 <select name="pleasant2" id="lang">
+                    <option value="Nil">--Select-- </option>
                   <option value="Pleasant">Pleasant</option>
                   <option value="Unpleasant">Unpleasant</option>
                   <option value="Neutral">Neutral</option>
@@ -110,6 +157,7 @@
                 </select>   
             </div>
         </div>
+
         <div class="row"> 
             <div class="column">
                 <audio id="music3" autoplay controls>
@@ -119,6 +167,7 @@
             <div class="column">
                 <input type="hidden" id="file_name3" name="file_name3" value="">
                 <select name="noise3" id="lang">
+                    <option value="Nil"> --Select--</option>
                   <option value="DogBarking">Dog Barking</option>
                   <option value="Rain">Rain</option>
                   <option value="Crickets">Crickets</option>
@@ -137,6 +186,7 @@
             </div>
             <div class="column">
                 <select name="pleasant3" id="lang">
+                    <option value="Nil"> --Select--</option>
                   <option value="Pleasant">Pleasant</option>
                   <option value="Unpleasant">Unpleasant</option>
                   <option value="Neutral">Neutral</option>
@@ -144,6 +194,7 @@
                 </select>   
             </div>
         </div>
+
         <div class="row"> 
             <div class="column">
                 <audio id="music4" autoplay controls>
@@ -153,6 +204,7 @@
             <div class="column">
                 <input type="hidden" id="file_name4" name="file_name4" value="">
                 <select name="noise4" id="lang">
+                    <option value="Nil"> --Select--</option>
                   <option value="DogBarking">Dog Barking</option>
                   <option value="Rain">Rain</option>
                   <option value="Crickets">Crickets</option>
@@ -171,6 +223,7 @@
             </div>
             <div class="column">
                 <select name="pleasant4" id="lang">
+                    <option value="Nil"> --Select--</option>
                   <option value="Pleasant">Pleasant</option>
                   <option value="Unpleasant">Unpleasant</option>
                   <option value="Neutral">Neutral</option>
@@ -178,6 +231,7 @@
                 </select>   
             </div>
         </div>
+
         <div class="row"> 
             <div class="column">
                 <audio id="music5" autoplay controls>
@@ -187,6 +241,7 @@
             <div class="column">
                 <input type="hidden" id="file_name5" name="file_name5" value="">
                 <select name="noise5" id="lang">
+                    <option value="Nil"> --Select--</option>
                   <option value="DogBarking">Dog Barking</option>
                   <option value="Rain">Rain</option>
                   <option value="Crickets">Crickets</option>
@@ -205,6 +260,7 @@
             </div>
             <div class="column">
                 <select name="pleasant5" id="lang">
+                    <option value="Nil"> --Select--</option>
                   <option value="Pleasant">Pleasant</option>
                   <option value="Unpleasant">Unpleasant</option>
                   <option value="Neutral">Neutral</option>
@@ -212,6 +268,8 @@
                 </select>   
             </div>
         </div>
+
+
         <div class="row"> 
             <div class="column">
                 <audio id="music6" autoplay controls>
@@ -221,6 +279,7 @@
             <div class="column">
                 <input type="hidden" id="file_name6" name="file_name6" value="">
                 <select name="noise6" id="lang">
+                    <option value="Nil">--Select-- </option>
                   <option value="DogBarking">Dog Barking</option>
                   <option value="Rain">Rain</option>
                   <option value="Crickets">Crickets</option>
@@ -239,6 +298,7 @@
             </div>
             <div class="column">
                 <select name="pleasant6" id="lang">
+                    <option value="Nil"> --Select--</option>
                   <option value="Pleasant">Pleasant</option>
                   <option value="Unpleasant">Unpleasant</option>
                   <option value="Neutral">Neutral</option>
@@ -246,6 +306,7 @@
                 </select>   
             </div>
         </div>
+
         <div class="row"> 
             <div class="column">
                 <audio id="music7" autoplay controls>
@@ -255,6 +316,7 @@
             <div class="column">
                 <input type="hidden" id="file_name7" name="file_name7" value="">
                 <select name="noise7" id="lang">
+                    <option value="Nil"> --Select--</option>
                   <option value="DogBarking">Dog Barking</option>
                   <option value="Rain">Rain</option>
                   <option value="Crickets">Crickets</option>
@@ -273,6 +335,7 @@
             </div>
             <div class="column">
                 <select name="pleasant7" id="lang">
+                    <option value="Nil"> --Select--</option>
                   <option value="Pleasant">Pleasant</option>
                   <option value="Unpleasant">Unpleasant</option>
                   <option value="Neutral">Neutral</option>
@@ -280,6 +343,7 @@
                 </select>   
             </div>
         </div>
+
         <div class="row"> 
             <div class="column">
                 <audio id="music8" autoplay controls>
@@ -289,6 +353,7 @@
             <div class="column">
                 <input type="hidden" id="file_name8" name="file_name8" value="">
                 <select name="noise8" id="lang">
+                    <option value="Nil"> --Select--</option>
                   <option value="DogBarking">Dog Barking</option>
                   <option value="Rain">Rain</option>
                   <option value="Crickets">Crickets</option>
@@ -307,6 +372,7 @@
             </div>
             <div class="column">
                 <select name="pleasant8" id="lang">
+                    <option value="Nil"> --Select--</option>
                   <option value="Pleasant">Pleasant</option>
                   <option value="Unpleasant">Unpleasant</option>
                   <option value="Neutral">Neutral</option>
@@ -314,6 +380,7 @@
                 </select>   
             </div>
         </div>
+
         <div class="row"> 
             <div class="column">
                 <audio id="music9" autoplay controls>
@@ -323,6 +390,7 @@
             <div class="column">
                 <input type="hidden" id="file_name9" name="file_name9" value="">
                 <select name="noise9" id="lang">
+                    <option value="Nil"> --Select--</option>
                   <option value="DogBarking">Dog Barking</option>
                   <option value="Rain">Rain</option>
                   <option value="Crickets">Crickets</option>
@@ -341,6 +409,7 @@
             </div>
             <div class="column">
                 <select name="pleasant9" id="lang">
+                    <option value="Nil">--Select-- </option>
                   <option value="Pleasant">Pleasant</option>
                   <option value="Unpleasant">Unpleasant</option>
                   <option value="Neutral">Neutral</option>
@@ -348,6 +417,7 @@
                 </select>   
             </div>
         </div>
+
         <div class="row"> 
             <div class="column">
                 <audio id="music10" autoplay controls>
@@ -357,6 +427,7 @@
             <div class="column">
                 <input type="hidden" id="file_name10" name="file_name10" value="">
                 <select name="noise10" id="lang">
+                    <option value="Nil"> --Select--</option>
                   <option value="DogBarking">Dog Barking</option>
                   <option value="Rain">Rain</option>
                   <option value="Crickets">Crickets</option>
@@ -375,6 +446,7 @@
             </div>
             <div class="column">
                 <select name="pleasant10" id="lang">
+                    <option value="Nil"> --Select--</option>
                   <option value="Pleasant">Pleasant</option>
                   <option value="Unpleasant">Unpleasant</option>
                   <option value="Neutral">Neutral</option>
@@ -385,10 +457,47 @@
         <br>
         <br>
         <br>
-        <input type="submit" id="submit" value="Submit" />
+    </div>
+    <div>
+            <!-- <input name="next-btn" type="button" id="nextpage"  value="Go" hidden="true"  />  -->
+            <button type="button" id="nextBtn" onclick="nextPrev(1)" >Next</button> 
+            <input name="form-name" type="submit" id="nextpage"  value="Submit"  hidden="true" /> 
+        </div>
           </form>
 
-          
+
+<script type="text/javascript">
+    var currentTab = 0; // Current tab is set to be the first tab (0)
+    showTab(currentTab); // Display the current tab
+
+    function showTab(n) {
+      // This function will display the specified tab of the form ...
+      var x = document.getElementsByClassName("tab");
+      x[n].style.display = "block";
+      if (n == (1)) {
+        document.getElementById("nextpage").hidden = false;
+        document.getElementById("nextBtn").hidden = true;
+        document.getElementById("nextBtn").disabled = true;
+      }
+        }
+    
+    
+    function nextPrev(n) {
+      // This function will figure out which tab to display
+      var x = document.getElementsByClassName("tab");
+      // Hide the current tab:
+      x[currentTab].style.display = "none";
+      // Increase or decrease the current tab by 1:
+      currentTab = currentTab + n;
+      // Otherwise, display the correct tab:
+      showTab(currentTab);
+    }
+
+    function nextPage(){
+        document.getElementById('DominantNoise').submit();
+    }
+    </script>  
+
           <script type="text/javascript">
             function myFunction() {
                 fileArray = [
@@ -409,6 +518,7 @@
                     "Samples/206037-2-0-25.wav",
                     "Samples/209864-5-0-3.wav"
                 ]
+
                 var n = fileArray.length;
                 for (let i = 0; i < n; i++) {
                     var num = Math.floor(Math.random() * fileArray.length);
@@ -425,14 +535,16 @@
                     fileArray.splice(num, 1);
                 }
             }
-            myFunction()
+                myFunction()
         </script>
+
 <script type="text/javascript">
     window.history.forward();
     function noBack() {
         window.history.forward();
     }
 </script>
-        </div>
+
     </body>
 </html>
+
