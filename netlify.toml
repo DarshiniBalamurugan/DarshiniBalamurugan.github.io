@@ -1,4 +1,5 @@
 [[redirects]]
-  from = "/*"
-  to = "/endpage.html"
+  from = "/endpage"
+  to = "endpage.html"
   status = 200
+  force = true
