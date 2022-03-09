@@ -59,6 +59,8 @@
                         <option value="Eurasian">Eurasian</option>
                         <option value="Others">Others</option>
                     </select>
+            <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+
         </div>
 
     <div class="tab">
@@ -447,13 +449,15 @@
         <br>
         <br>
         <br>
+        <button type="submit" name = "form-name" id="nextpage" class="submit-btn">Submit</button>
     </div>
-    <div>
-            <!-- <input name="next-btn" type="button" id="nextpage"  value="Go" hidden="true"  />  -->
+    <!-- <div>
             <button type="button" id="nextBtn" onclick="nextPrev(1)" >Next</button> 
             <input name="form-name" type="submit" id="nextpage"  value="Submit"  hidden="true" /> 
-        </div>
+        </div> -->
           </form>
+
+
 
 <script>
     var currentTab = 0; // Current tab is set to be the first tab (0)
@@ -485,41 +489,7 @@
         document.getElementById("nextBtn").hidden = true;
 
     }
-
-
 </script>
-
-<!-- <script type="text/javascript">
-    var currentTab = 0; // Current tab is set to be the first tab (0)
-    showTab(currentTab); // Display the current tab
-
-    function showTab(n) {
-      // This function will display the specified tab of the form ...
-      var x = document.getElementsByClassName("tab");
-      x[n].style.display = "block";
-      if (n == (1)) {
-        document.getElementById("nextpage").hidden = false;
-        document.getElementById("nextBtn").hidden = true;
-        document.getElementById("nextBtn").disabled = true;
-      }
-        }
-    
-    
-    function nextPrev(n) {
-      // This function will figure out which tab to display
-      var x = document.getElementsByClassName("tab");
-      // Hide the current tab:
-      x[currentTab].style.display = "none";
-      // Increase or decrease the current tab by 1:
-      currentTab = currentTab + n;
-      // Otherwise, display the correct tab:
-      showTab(currentTab);
-    }
-
-    function nextPage(){
-        document.getElementById('DominantNoise').submit();
-    }
-    </script>   -->
 
           <script type="text/javascript">
             function myFunction() {
