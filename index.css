@@ -240,6 +240,17 @@ div.a {
     font-weight: bold;
   }
 
+  #nextBtn {
+    font-family: "Open Sans", sans-serif;
+    background: #000000fa;
+    color: #fffffffa;
+    font-size: 18px;
+    padding: 12px;
+    border-radius: 3px;
+    width: 350px;
+    font-weight: bold;
+  }
+
 
   select {
     border: none;
