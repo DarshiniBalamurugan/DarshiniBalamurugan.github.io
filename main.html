@@ -29,7 +29,7 @@
             <br>
     </div> -->
 
-    <form  id = "DominantNoise" name="DominantNoise" method="POST" data-netlify="true">
+    <form  action ="endpage.html"   id = "DominantNoise" name="DominantNoise" method="POST" data-netlify="true">
 
         <div class="tab">
             <p>Please select your age group: </p>
@@ -52,16 +52,6 @@
             <p>Please select your ethnicity: </p>
             <input type="hidden" id="ethnicity" name="ethnicity" value!="">
                       <select name="ethnicity" id="lang">
-                        <option value="Nil"> --Select--</option>
-                        <option value="Chinese">Chinese</option>
-                        <option value="Malay">Malay</option>
-                        <option value="Indian">Indian</option>
-                        <option value="Eurasian">Eurasian</option>
-                        <option value="Others">Others</option>
-                    </select>
-                    <p>Please select your ethnicity: </p>
-            <input type="hidden" id="test" name="test" value!="">
-                      <select name="test" id="lang">
                         <option value="Nil"> --Select--</option>
                         <option value="Chinese">Chinese</option>
                         <option value="Malay">Malay</option>
@@ -465,8 +455,41 @@
         </div>
           </form>
 
+<script>
+    var currentTab = 0; // Current tab is set to be the first tab (0)
+    showTab(currentTab); // Display the current tab
 
-<script type="text/javascript">
+    function showTab(n) {
+      // This function will display the specified tab of the form ...
+      var x = document.getElementsByClassName("tab");
+      x[n].style.display = "block";
+      if (n == (1)) {
+        document.getElementById("nextpage").hidden = false;
+        document.getElementById("nextBtn").hidden = true;
+      }
+    }
+
+    function nextPrev(n) {
+      // This function will figure out which tab to display
+      var x = document.getElementsByClassName("tab");
+      // Hide the current tab:
+      x[currentTab].style.display = "none";
+      // Increase or decrease the current tab by 1:
+      currentTab = currentTab + n;
+      // Otherwise, display the correct tab:
+      showTab(currentTab);
+    }
+
+    function newfn(){
+        document.getElementById("nextpage").hidden = false;
+        document.getElementById("nextBtn").hidden = true;
+
+    }
+
+
+</script>
+
+<!-- <script type="text/javascript">
     var currentTab = 0; // Current tab is set to be the first tab (0)
     showTab(currentTab); // Display the current tab
 
@@ -496,7 +519,7 @@
     function nextPage(){
         document.getElementById('DominantNoise').submit();
     }
-    </script>  
+    </script>   -->
 
           <script type="text/javascript">
             function myFunction() {
