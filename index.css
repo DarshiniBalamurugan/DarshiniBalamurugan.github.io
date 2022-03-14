@@ -256,14 +256,14 @@ div.a {
     font-family: "Open Sans", sans-serif;
     text-align: center;
     color: #5c5c5cfa;
-    background: #f0f0ec;
+    background: #d3ee94;
     padding: 12px;
     border-radius: 3px;
     width: 250px;
     font-size: 14px;
   }
   
-  select option:first-child { color:red; }
+  .redText{ background-color:rgb(245, 230, 198); }
 
 
   table {
